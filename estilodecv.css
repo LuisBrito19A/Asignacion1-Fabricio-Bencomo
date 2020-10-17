@@ -1,0 +1,46 @@
+header {
+    background-color: blue;
+
+  }
+body {
+    background-color: whitesmoke;
+  border: 15px solid gray;
+  padding: 20px;
+  margin: 10px;
+
+  }
+  
+  h1 {
+    color:lightblue;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+  }
+  
+  p, table, ol {
+    font-family: verdana;
+    font-size: 20px;
+    color: lightseagreen;
+  }
+
+  label {
+  
+  font-family: 'Times New Roman', Times, serif;  
+
+  }
+
+  footer, h3, ul  {
+      color: white;
+  
+
+  }
+  
+
+  footer {
+      
+  
+    background-color: black;
+
+  }
+  

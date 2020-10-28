@@ -6,37 +6,54 @@
     <meta charset="UTF-8">
       <!----Responsive Web-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <title> Cv de Fabricio Bencomo</title>
 </Head>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <Body>
+  <script>
+    var fecha = new Date();
+    var ano = fecha.getFullYear();
+    alert('El CV Se actualizo en: '+ano);
+  </script>
 
 <div id="profile" class="center">
 
-   <img src="fotomia.jpg" alt="Foto de Fabriciobencomo" width="100" height="100"> 
+  <img src="Fotomia.jpg"  class="img-thumbnail">
      <h2><Strong>FABRICIO</Strong></h2>
     <h2><strong><bold>BENCOMO</bold></strong></h2>
     
     <ul id="menu" class="inline">
-        <li><a href="experiencia">experiencia</a></li>
-        <li><a href="habilidades">habilidades</a></li>
-        <li><a href="educacion">educacion</a></li>
-        <li><a href="contactar">contactar</a></li>
-        <li><a href="Redessociales">Redes sociales</a></li>
+      
+      <button type="button" class="btn btn-default">  <li><a href="experiencia">Experiencia</a></li></button>
+      <button type="button" class="btn btn-default">   <li><a href="habilidades">Habilidades</a></li></button> 
+      <button type="button" class="btn btn-default">   <li><a href="educacion">Educacion</a></li></button>
+      <button type="button" class="btn btn-default"> <li><a href="contactar">Contactar</a></li></button>
+      <button type="button" class="btn btn-default">  <li><a href="Redessociales">Redes Sociales</a></li></button>
     </ul> 
 </div>
     <hr>
 
     <!----------- Informacion  -------------->
     <div id="container">
+     
+<div id="Mostrar" style="display: none;">
 <H2>Datos</H2>
 <p>Nacimiento: 23/06/2002</p>
 <p>C.I:28098413</p>
 <p>Residencia:Carabobo, valencia, El parral 2001</p>
+</div> 
+<button type="button"  class="btn btn-default" onclick="document.getElementById('Mostrar').style.display='block'">Mostrar Datos</button>
+ 
 </div>
 <hr>
 
 <h2 id="experiencia">Experiencia </h2>
+<table class="table table-hover">
+ 
+
  <ol>
      <LI>
          <p><b> Trabajo 1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing 
@@ -51,7 +68,9 @@
            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </LI>
  </ol>
-
+ <table class="table table-hover">
+  
+</table>
  <hr>
 
  <h2 id="habilidades">Habilidades</h2>
@@ -60,6 +79,10 @@
      <li>
          <strong>Adobe:</strong>Photoshop, Lightroom, Illustrator, After Effects
      </li>
+     <img id="Fotodeej" class="img-thumbnail" width="140" height="140">
+     <hr>
+     <button onclick="document.getElementById('Fotodeej').src='ILUSTRACIONAIRFORCEONE.jpg'">Ver ilustracion de EJ </button>
+     <hr>
      <li>
         <strong>Musica:</strong>Guitarra, Teclado, Bajo
     </li>
@@ -68,7 +91,9 @@
 
  <hr>
 <h2 id="educacion">Educación</h2>
-<table id="educacion">
+<table id="educacion" class="table table-hover">
+ 
+  
   <thead>
   <tr>
     <th>Título</th>
@@ -104,7 +129,7 @@
 <hr>
 
 <h2 id="contactar">Contactar</h2>
-
+<table class="table table-bordered">
 <P>
     <b>Telefono:</b>+54 11-22502268/+58 414-4244614
     
@@ -113,25 +138,39 @@
     <b>Mail:</b>Fabriciobencomo.viloria@gmail.com
 
 </p>
+</table>
+<script src="scripts.mjs"></script>
 
-<h4>Deja tu conulta </h4>
+<div id="Consultas">
+<div id="Graciasporconsultar">
+  <hr>
+<strong><h3>Consulta </h3></strong>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Asunto</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="...">
+  </div>
+  <div class="form-group">
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="exampleInputName2">Descripcion</label>
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="...">
+      </div>
+      <div class="form-group">
+    </form>
 
-<label for="subject">Asunto: </label>
-<input id="subject" type="text" required="">
 
-<label for="body">Cuerpo:</label>
-<textarea id="body" required=""></textarea>
+<button type="submit" class="pure-button pure-button-primary" onclick="EPA()">Enviar</button>
 
-
-
-<button type="submit" class="pure-button pure-button-primary">Enviar</button>
+</div>
+</div>
 
 
 <footer>
  <h3 id="redessociales">Redes Sociales</h3>
-<ul>
-    <li>Instragram:Fabricioben</li>
-    <li>Twitter:Fabricioben</li>
+
+<img src="logodeig.jpg" width="40" height="40" ><button type="button" class="btn btn-link">Fabricioben</button>
+ <img src="logodetw.jpg" width="40" height="40" ><button type="button" class="btn btn-link">Fabricioben</button>
 </ul>
 
 </footer>
